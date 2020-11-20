@@ -42,6 +42,8 @@ class Game:
             self.proceed_answer = input("Would you like to play again (y/n): ")
             if self.proceed_answer == 'y':
                 self.game_reset()
+            else: 
+                print("Thanks for playing ! come back soon !")    
 
     def get_guess(self):
         self.prompt = input("\nPlease enter a letter : ")
@@ -68,7 +70,5 @@ class Game:
     def game_reset(self):
         self.missed = 0
         self.guesses = [" "]
-        self.phrases = [Phrase('Bananas are yellow'), Phrase('I Like to Run'), Phrase('The Pandemic needs to End'),
-                        Phrase('Tonight there is a full Moon'), Phrase('I CANNOT wait to eat Donuts')]
         self.active_phrase = self.get_random_phrase()
 
